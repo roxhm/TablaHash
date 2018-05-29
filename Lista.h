@@ -1,5 +1,5 @@
 #pragma once
-#include "Elem.h"
+#include "ElemL.h"
 
 typedef struct Nodo
 {
@@ -7,7 +7,7 @@ typedef struct Nodo
 	struct Nodo *siguiente; 
 } *Lista;
 
-//PROTOTIPOS: 
+// P R O T O T I P O S : 
 
 //Constructoras: 
 Lista Vacia ( ); 
@@ -29,4 +29,4 @@ Lista Concat ( Lista , Lista );
 Lista Invierte ( Lista );  
 Lista InsOrd ( Elem , Lista );
 Lista OrdList ( Lista );
-void ImpListaArch ( Lista , FILE * );
+// void ImpListaArch ( Lista , FILE * );
