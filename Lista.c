@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//FUNCIONES: 
+
+//F U N C I O N E S: 
+
 Lista Vacia ( ) { return NULL; }
 
 Lista Cons ( Elem e, Lista l )
@@ -69,7 +71,7 @@ Lista InsOrd ( Elem e, Lista a )
 	if ( EsVacia( a ))
 		return Cons( e, Vacia()); 
 	else 
-		if ( EsMoI( e, Cabeza( a )))
+		if ( EsMenorOIgual( e, Cabeza( a )))
 			return Cons( e, a ); 
 		else 
 			return Cons(Cabeza( a ),InsOrd( e, Resto( a )));
@@ -83,6 +85,8 @@ Lista OrdList ( Lista a )
 		return InsOrd( Cabeza( a ), OrdList ( Resto ( a )));
 }
 
+/* 
+
 void ImpListaArch ( Lista a, FILE * out )
 {
 	if ( !EsVacia( a ) )
@@ -90,4 +94,5 @@ void ImpListaArch ( Lista a, FILE * out )
 		ImpElemArch( Cabeza( a ));
 		ImpListaArch( Resto( a )); 
 	}
-}
+} 
+*/
